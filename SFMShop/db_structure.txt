@@ -1,0 +1,34 @@
+Структура БД для SFMShop
+
+Таблица users
+
+- id (INT, PRIMARY KEY)
+- name (VARCHAR)
+- email (VARCHAR)
+
+Таблица products
+
+- id (INT, PRIMARY KEY)
+- name (VARCHAR)
+- price (DECIMAL)
+- quantity (INT)
+
+Таблица orders
+
+- id (INT, PRIMARY KEY)
+- user_id (INT, FOREIGN KEY (users.id))
+- total (DECIMAL)
+- created_at (TIMESTAMP)
+
+Таблица order_items
+
+- id (INT, PRIMARY KEY)
+- order_id (INT, FOREIGN KEY (orders.id))
+- product_id (INT, FOREIGN KEY (products.id))
+- quantity (INT)
+
+Связи между талбицами:
+
+orders.user_id -> users.id
+order_items.order_id -> orders.id
+order_items.product_id -> products.id

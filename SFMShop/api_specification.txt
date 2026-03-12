@@ -1,0 +1,254 @@
+GET /products - список товаров:
+
+    HTTP метод: GET
+    Путь: /products
+    Описание: Получние все доступных товаров
+    Параметры (path parameters, query parameters):
+        - id (integer): идентификатор товара
+        - name (string): название товара
+        - price (integer): цена товара
+    Статусы ответов (успех и ошибки):
+        - 200 OK: запрос выполнен успешно
+        - 400 Bad Request: некоректные параметры запроса
+        - 404 Not Found: товар не найден
+        - 500 Internal Server Error: ошибка на стороне сервера
+    Примеры запросов и ответов:
+        GET /products HTTP/1.1
+        Host: sfmshop.com
+
+        Ответ:
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        [{"id": 1, "name": "Ноутбук", "price": 50000}, ...]
+        ----------
+        400 Bad Request:
+        { "error": "Invalid query parameter", "message": ...}
+        ----------
+        404 Not Found:
+        { "error": "Not Found", "message": ...}
+        ----------
+        500 Internal Server Error:
+        { "error": "Internal Server Error", "message": ...}
+
+GET /products/{id} - товар по ID:
+
+    HTTP метод: GET
+    Путь: /products/{id}
+    Описание: Получние товара по id
+    Параметры (path parameters, query parameters):
+        - id (integer): идентификатор товара
+        - name (string): название товара
+        - price (integer): цена товара
+    Статусы ответов (успех и ошибки):
+        - 200 OK: запрос выполнен успешно
+        - 400 Bad Request: некоректные параметры запроса
+        - 404 Not Found: товар не найден
+        - 500 Internal Server Error: ошибка на стороне сервера
+    Примеры запросов и ответов:
+        GET /products/{id} HTTP/1.1
+        Host: sfmshop.com
+
+        Ответ:
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        [{"id": 1, "name": "Ноутбук", "price": 50000}, ...]
+        ----------
+        400 Bad Request:
+        { "error": "Invalid query parameter", "message": ...}
+        ----------
+        404 Not Found:
+        { "error": "Not Found", "message": "Товар с id=1 не найден"}
+        ----------
+        500 Internal Server Error:
+        { "error": "Internal Server Error", "message": ...}
+
+POST /products - создание товара:
+
+    HTTP метод: POST
+    Путь: /products
+    Описание: Создание нового товара
+    Параметры (path parameters, query parameters):
+        - user_id (integer): идентификатор пользователя
+        - product_id (integer): идентификатор товара
+        - quantity (integer): количество товара
+    Статусы ответов (успех и ошибки):
+        - 201 Created: товар успешно создан
+        - 400 Bad Request: некоректные параметры запроса
+        - 500 Internal Server Error: ошибка на стороне сервера
+    Примеры запросов и ответов:
+        POST /products HTTP/1.1
+        Host: sfmshop.com
+        Content-Type: application/json
+        {"user_id": 1, "product_id": 2, "quantity": 1}
+
+        Ответ:
+        HTTP/1.1 201 Created
+        Content-Type: application/json
+        {"id": 5, "message": "Заказ создан"}
+        ----------
+        400 Bad Request:
+        { "error": "Invalid query parameter", "message": ...}
+        ----------
+        500 Internal Server Error:
+        { "error": "Internal Server Error", "message": ...}
+
+PUT /products/{id} - обновление товара:
+
+    HTTP метод: PUT
+    Путь: /products/{id}
+    Описание: Обновление данных товара по id
+    Параметры (path parameters, query parameters):
+        - id (integer): идентификатор товара
+        - name (string): название товара
+        - price (integer): цена товара
+    Статусы ответов (успех и ошибки):
+        - 200 OK: запрос выполнен успешно
+        - 400 Bad Request: некоректные параметры запроса
+        - 404 Not Found: товар не найден
+        - 500 Internal Server Error: ошибка на стороне сервера
+    Примеры запросов и ответов:
+        PUT /products/{id} HTTP/1.1
+        Host: sfmshop.com
+        Content-Type: application/json
+        {"id": 1, "name": "Ноутбук обновленный", "price": 48000}
+
+        Ответ:
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        {"id": 1, "name": "Ноутбук обновленный", "price": 45000}
+        ----------
+        400 Bad Request:
+        { "error": "Invalid query parameter", "message": ...}
+        ----------
+        404 Not Found:
+        { "error": "Not Found", "message": "Товар с id=1 не найден"}
+        ----------
+        500 Internal Server Error:
+        { "error": "Internal Server Error", "message": ...}
+
+DELETE /products/{id} - удаление товара:
+
+    HTTP метод: DELETE
+    Путь: /products/{id}
+    Описание: Удаление данных товара по id
+    Параметры (path parameters, query parameters):
+        - id (integer): идентификатор товара
+        - name (string): название товара
+        - price (integer): цена товара
+    Статусы ответов (успех и ошибки):
+        - 200 OK: запрос выполнен успешно
+        - 204 No Content: запрос успешно обработан, сервер ничего не вернул
+        - 400 Bad Request: некоректные параметры запроса
+        - 404 Not Found: товар не найден
+        - 500 Internal Server Error: ошибка на стороне сервера
+    Примеры запросов и ответов:
+        DELETE /products/{id} HTTP/1.1
+        Host: sfmshop.com
+
+        Ответ:
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        {"message": "Товар удален"}
+        ----------
+        400 Bad Request:
+        { "error": "Invalid query parameter", "message": ...}
+        ----------
+        404 Not Found:
+        { "error": "Not Found", "message": "Товар с id=1 не найден"}
+        ----------
+        500 Internal Server Error:
+        { "error": "Internal Server Error", "message": ...}
+
+GET /orders - список заказов:
+
+    HTTP метод: GET
+    Путь: /orders
+    Описание: Получние все доступных заказов
+    Параметры (path parameters, query parameters):
+        - id (integer): идентификатор заказа
+        - total (integer): сумма заказа
+        - created_at (timestamp): дата заказа
+    Статусы ответов (успех и ошибки):
+        - 200 OK: запрос выполнен успешно
+        - 400 Bad Request: некоректные параметры запроса
+        - 404 Not Found: заказ не найден
+        - 500 Internal Server Error: ошибка на стороне сервера
+    Примеры запросов и ответов:
+        GET /orders HTTP/1.1
+        Host: sfmshop.com
+
+        Ответ:
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        [{"id": 1, "total": 50000, "created_at": "2024-01-15"}, ...]
+        ----------
+        400 Bad Request:
+        { "error": "Invalid query parameter", "message": ...}
+        ----------
+        404 Not Found:
+        { "error": "Not Found", "message": ...}
+        ----------
+        500 Internal Server Error:
+        { "error": "Internal Server Error", "message": ...}
+
+POST /orders - создание заказа:
+
+    HTTP метод: POST
+    Путь: /orders
+    Описание: Создание нового заказ
+    Параметры (path parameters, query parameters):
+        - user_id (integer): идентификатор пользователя
+        - product_id (integer): идентификатор товара
+        - quantity (integer): количество товара
+    Статусы ответов (успех и ошибки):
+        - 201 OK: заказ успешно создан
+        - 400 Bad Request: некоректные параметры запроса
+        - 500 Internal Server Error: ошибка на стороне сервера
+    Примеры запросов и ответов:
+        POST /orders HTTP/1.1
+        Host: sfmshop.com
+        Content-Type: application/json
+        {"user_id": 1, "product_id": 2, "quantity": 1}
+
+        Ответ:
+        HTTP/1.1 201 Created
+        Content-Type: application/json
+        {"id": 5, "message": "Заказ создан", "total": 50000, "created_at": "2023-10-20T14:00:00Z"}
+        ----------
+        400 Bad Request:
+        { "error": "Invalid query parameter", "message": ...}
+        ----------
+        500 Internal Server Error:
+        { "error": "Internal Server Error", "message": ...}
+
+GET /users/{id}/orders - заказы пользователя:
+
+    HTTP метод: GET
+    Путь: /users/{id}/orders
+    Описание: Получние все доступных заказы по id пользователя
+    Параметры (path parameters, query parameters):
+        - id (integer): идентификатор заказа
+        - total (integer): сумма заказа
+        - created_at (timestamp): дата заказа
+    Статусы ответов (успех и ошибки):
+        - 200 OK: запрос выполнен успешно
+        - 400 Bad Request: некоректные параметры запроса
+        - 404 Not Found: заказ не найден
+        - 500 Internal Server Error: ошибка на стороне сервера
+    Примеры запросов и ответов:
+        GET /orders HTTP/1.1
+        Host: sfmshop.com
+
+        Ответ:
+        HTTP/1.1 200 OK
+        Content-Type: application/json
+        [{"id": 1, "total": 50000, "created_at": "2024-01-15"}, ...]
+        ----------
+        400 Bad Request:
+        { "error": "Invalid query parameter", "message": ...}
+        ----------
+        404 Not Found:
+        { "error": "Not Found", "message": ...}
+        ----------
+        500 Internal Server Error:
+        { "error": "Internal Server Error", "message": ...}
