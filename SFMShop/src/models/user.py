@@ -6,7 +6,7 @@ class User:
         self.name = name
         try:
             if '@' not in email:
-                raise ValidationError('Неверный формат email')
+                raise ValidationError('Неверный формат "email"')
             self.email = email
         except ValidationError as e:
             print(f'Ошибка при создании пользователя: {e}')
