@@ -54,3 +54,8 @@ class Product:
         if new_quantity < 0:
             raise InsufficientStockError("Результат обновления остатков не может быть отрицательным")
         self.quantity = new_quantity
+
+    def set_price(self, price):
+        if price < 0:
+            raise NegativePriceError("Цена не может быть отрицательной")
+        self.price = price
