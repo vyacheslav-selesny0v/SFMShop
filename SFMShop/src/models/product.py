@@ -45,3 +45,12 @@ class Product:
         if not isinstance(other, Product):
             return False
         return self.name == other.name and self.price == other.price
+
+    def check_stock(self):
+        return self.quantity
+
+    def update_stock(self, amount):
+        new_quantity = self.quantity + amount
+        if new_quantity < 0:
+            raise InsufficientStockError("Результат обновления остатков не может быть отрицательным")
+        self.quantity = new_quantity
