@@ -1,8 +1,9 @@
-from SFMShop.src.models import NegativePriceError, InsufficientStockError, ValidationError
+from SFMShop.src.models.exceptions import NegativePriceError, InsufficientStockError, ValidationError
 
 
 class Product:
-    def __init__(self, name, price, quantity):
+    def __init__(self, product_id, name, price, quantity):
+        self.id = product_id
         self.name = name
         try:
             if price < 0:
