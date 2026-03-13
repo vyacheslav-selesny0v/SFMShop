@@ -22,6 +22,7 @@ class Product:
 
 
     def apply_discount(self):
+        """Расчет скидки"""
         pass
 
 
