@@ -1,4 +1,4 @@
-from SFMShop.src.models import NegativePriceError, InsufficientStockError
+from SFMShop.src.models import NegativePriceError, InsufficientStockError, ValidationError
 
 
 class Product:
@@ -14,17 +14,16 @@ class Product:
         
         try:
             if quantity < 0:
-                raise ValueError('Количество не может быть отрицательным')
+                raise ValidationError('Количество не может быть отрицательным')
             self.quantity = quantity
-        except ValueError as e:
+        except ValidationError as e:
             print(f'Ошибка при создании товара: {e}')
             self.quantity = 0
 
-
-    def apply_discount(self):
-        """Расчет скидки"""
-        pass
-
+    def apply_discount(self, percent):
+        if not (0 <= percent <= 100):
+            raise ValidationError("Скидка должна быть от 0 до 100%")
+        self.price = self.price * (1 - percent / 100)
 
     def sell(self, amount):
         if self.quantity < amount:
