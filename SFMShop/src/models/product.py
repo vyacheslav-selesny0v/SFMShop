@@ -20,6 +20,11 @@ class Product:
             print(f'Ошибка при создании товара: {e}')
             self.quantity = 0
 
+
+    def apply_discount(self):
+        pass
+
+
     def sell(self, amount):
         if self.quantity < amount:
             raise InsufficientStockError(
