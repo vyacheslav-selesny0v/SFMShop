@@ -1,0 +1,22 @@
+commit 03f6873bd069e45f0b3507851e6bc00d1099595a (HEAD -> feature/add-logging)
+Author: Viacheslav <vyache777slav@gmail.com>
+Date:   Sun Mar 15 17:05:28 2026 +0400
+
+    Добавлена система логирования
+
+diff --git a/docs/git_branches.txt b/docs/git_branches.txt
+new file mode 100644
+index 0000000..382883a
+--- /dev/null
++++ b/docs/git_branches.txt
+@@ -0,0 +1,5 @@
++* main
++  remotes/origin/HEAD -> origin/main
++  remotes/origin/feature/add-email-validation
++  remotes/origin/feature/add-inventory-management
++  remotes/origin/main
+\ No newline at end of file
+diff --git a/docs/git_history.txt b/docs/git_history.txt
+new file mode 100644
+index 0000000..14874b9
+--- /dev/null

@@ -1,0 +1,164 @@
+git diff main feature/add-logging
+diff --git a/docs/git_branches.txt b/docs/git_branches.txt
+new file mode 100644
+index 0000000..382883a
+--- /dev/null
++++ b/docs/git_branches.txt
+@@ -0,0 +1,5 @@
++* main
++  remotes/origin/HEAD -> origin/main
++  remotes/origin/feature/add-email-validation
++  remotes/origin/feature/add-inventory-management
++  remotes/origin/main
+\ No newline at end of file
+diff --git a/docs/git_history.txt b/docs/git_history.txt
+new file mode 100644
+index 0000000..14874b9
+--- /dev/null
++++ b/docs/git_history.txt
+@@ -0,0 +1,399 @@
+diff --git a/docs/git_branches.txt b/docs/git_branches.txt
+new file mode 100644
++++ b/docs/git_branches.txt
+@@ -0,0 +1,5 @@
++* main
++  remotes/origin/HEAD -> origin/main
++  remotes/origin/feature/add-email-validation
++  remotes/origin/feature/add-inventory-management
++  remotes/origin/main
+\ No newline at end of file
+diff --git a/docs/git_history.txt b/docs/git_history.txt
+new file mode 100644
+index 0000000..14874b9
+--- /dev/null
++++ b/docs/git_history.txt
+@@ -0,0 +1,399 @@
++* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+:...skipping...
+diff --git a/docs/git_branches.txt b/docs/git_branches.txt
+new file mode 100644
+index 0000000..382883a
+--- /dev/null
++++ b/docs/git_branches.txt
+@@ -0,0 +1,5 @@
++* main
++  remotes/origin/HEAD -> origin/main
++  remotes/origin/feature/add-email-validation
++  remotes/origin/feature/add-inventory-management
++  remotes/origin/main
+\ No newline at end of file
+diff --git a/docs/git_history.txt b/docs/git_history.txt
+new file mode 100644
+index 0000000..14874b9
+--- /dev/null
++++ b/docs/git_history.txt
+@@ -0,0 +1,399 @@
++* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
++*   337757a Merge branch 'feature/test-conflict'
++|\
++| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+diff --git a/docs/git_branches.txt b/docs/git_branches.txt
+new file mode 100644
+index 0000000..382883a
+--- /dev/null
++++ b/docs/git_branches.txt
+@@ -0,0 +1,5 @@
++* main
++  remotes/origin/HEAD -> origin/main
++  remotes/origin/feature/add-email-validation
++  remotes/origin/feature/add-inventory-management
++  remotes/origin/main
+\ No newline at end of file
+diff --git a/docs/git_history.txt b/docs/git_history.txt
+new file mode 100644
+index 0000000..14874b9
+--- /dev/null
++++ b/docs/git_history.txt
+@@ -0,0 +1,399 @@
++* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
++*   337757a Merge branch 'feature/test-conflict'
++|\
++| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
++* | 75f2100 Изменен метод apply_discount в классе Product
++|/
+:...skipping...
+diff --git a/docs/git_branches.txt b/docs/git_branches.txt
+new file mode 100644
+index 0000000..382883a
+--- /dev/null
++++ b/docs/git_branches.txt
+@@ -0,0 +1,5 @@
++* main
++  remotes/origin/HEAD -> origin/main
++  remotes/origin/feature/add-email-validation
++  remotes/origin/feature/add-inventory-management
++  remotes/origin/main
+\ No newline at end of file
+diff --git a/docs/git_history.txt b/docs/git_history.txt
+new file mode 100644
+index 0000000..14874b9
+--- /dev/null
++++ b/docs/git_history.txt
+@@ -0,0 +1,399 @@
++* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
++*   337757a Merge branch 'feature/test-conflict'
++|\
++| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
++* | 75f2100 Изменен метод apply_discount в классе Product
++|/
++*   1a08576 Merge branch 'feature/add-discount-system'
+:...skipping...
+diff --git a/docs/git_branches.txt b/docs/git_branches.txt
+new file mode 100644
+index 0000000..382883a
+--- /dev/null
++++ b/docs/git_branches.txt
+@@ -0,0 +1,5 @@
++* main
++  remotes/origin/HEAD -> origin/main
++  remotes/origin/feature/add-email-validation
++  remotes/origin/feature/add-inventory-management
++  remotes/origin/main
+\ No newline at end of file
+diff --git a/docs/git_history.txt b/docs/git_history.txt
+new file mode 100644
+index 0000000..14874b9
+--- /dev/null
++++ b/docs/git_history.txt
+@@ -0,0 +1,399 @@
++* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
++*   337757a Merge branch 'feature/test-conflict'
++|\
++| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
++* | 75f2100 Изменен метод apply_discount в классе Product
++|/
++*   1a08576 Merge branch 'feature/add-discount-system'
++* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+:...skipping...
+diff --git a/docs/git_branches.txt b/docs/git_branches.txt
+new file mode 100644
+index 0000000..382883a
+--- /dev/null
++++ b/docs/git_branches.txt
+@@ -0,0 +1,5 @@
++* main
++  remotes/origin/HEAD -> origin/main
++  remotes/origin/feature/add-email-validation
++  remotes/origin/feature/add-inventory-management
++  remotes/origin/main
+\ No newline at end of file
+diff --git a/docs/git_history.txt b/docs/git_history.txt
+new file mode 100644
+index 0000000..14874b9
+--- /dev/null
++++ b/docs/git_history.txt
+@@ -0,0 +1,399 @@
++* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
++*   337757a Merge branch 'feature/test-conflict'
++|\
++| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
++* | 75f2100 Изменен метод apply_discount в классе Product
++|/
++*   1a08576 Merge branch 'feature/add-discount-system'
++* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
++*   337757a Merge branch 'feature/test-conflict'
