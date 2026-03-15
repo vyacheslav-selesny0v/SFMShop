@@ -1,0 +1,399 @@
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+:...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+:...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+:...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+:...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+:...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+:...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+:...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+* 0eccda0 Обновление SFMShop
+:...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+* 0eccda0 Обновление SFMShop
+~
+(END)...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+* 0eccda0 Обновление SFMShop
+~
+~
+(END)...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+* 0eccda0 Обновление SFMShop
+~
+~
+~
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+* 0eccda0 Обновление SFMShop
+~
+~
+~
+~
+(END)...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+* 0eccda0 Обновление SFMShop
+~
+~
+~
+~
+~
+(END)...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+* 0eccda0 Обновление SFMShop
+~
+~
+~
+~
+~
+~
+(END)...skipping...
+* 36eea03 (HEAD -> main, origin/main, origin/HEAD) Урок 1 Углубленный Python
+*   337757a Merge branch 'feature/test-conflict'
+|\
+| * 4d396dc Изменены методы apply_discount и __init__ в классе Product
+* | 75f2100 Изменен метод apply_discount в классе Product
+|/
+*   1a08576 Merge branch 'feature/add-discount-system'
+|\
+* | d9d5f9f Добавлен метод set_price в класс Product
+* |   deee6fe Merge pull request #1 from vyacheslav-selesny0v/feature/add-inventory-management
+|\ \
+| | | * 1be94ac (origin/feature/add-inventory-management) Добавлен метод set_price в класс Product
+| | |/
+| |/|
+| * | 1e675d1 Добавлены методы управления складом в класс Product
+|/ /
+| | * c369698 (origin/feature/add-email-validation) Добавлена валидация email
+| | * 0846ee7 Добавлена валидация email в класс User
+| |/
+| * d4ed42d Добавлена система скидок в класс Product
+|/
+* 6bca32b Добавлена памятка по БД
+* 3c93b0b Добавлен аналез требований БД
+* 0eccda0 Обновление SFMShop

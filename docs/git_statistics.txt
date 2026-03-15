@@ -1,0 +1,12 @@
+commit 36eea03db2ff5acedad8b362d5703f72c5765021 (HEAD -> main, origin/main, origin/HEAD)
+Author: Viacheslav <vyache777slav@gmail.com>
+Date:   Fri Mar 13 18:14:17 2026 +0400
+
+    Урок 1 Углубленный Python
+
+ .../models/__pycache__/exceptions.cpython-313.pyc  | Bin 0 -> 1806 bytes
+ .../src/models/__pycache__/product.cpython-313.pyc | Bin 773 -> 4300 bytes
+ SFMShop/src/models/product.py                      |   5 +-
+ .../src/utils/__pycache__/__init__.cpython-313.pyc | Bin 0 -> 137 bytes
+ .../utils/__pycache__/calculations.cpython-313.pyc | Bin 0 -> 3202 bytes
+ SFMShop/src/utils/calculations.py                  |  60 ++++++++++++++++++++-
