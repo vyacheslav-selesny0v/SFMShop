@@ -1,4 +1,4 @@
-from SFMShop.src.models import InvalidOrderError
+from sfm_shop.src.models import InvalidOrderError
 
 
 class Order:

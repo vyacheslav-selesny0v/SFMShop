@@ -1,4 +1,4 @@
-from SFMShop.src.models.exceptions import NegativePriceError, InsufficientStockError, ValidationError
+from sfm_shop.src.models.exceptions import NegativePriceError, InsufficientStockError, ValidationError
 
 
 class Product:

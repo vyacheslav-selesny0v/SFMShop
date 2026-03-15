@@ -1,6 +1,6 @@
 import time
 from functools import wraps
-from SFMShop.src.models.product import Product
+from sfm_shop.src.models.product import Product
 
 def calculate_discount(price, discount_rate):
     return price * discount_rate

@@ -201,7 +201,7 @@ def create_order(order: OrderCreate):
 
         order_id = create_order_db(conn, order.user_id, total_price)
 
-        new_order_obj = OrderCreate(order.user_id, [order.product_id])
+        new_order_obj = Order(order.user_id, [order.product_id], order_id, total_price)
 
         new_order_obj.id = order_id
         new_order_obj.total_price = total_price

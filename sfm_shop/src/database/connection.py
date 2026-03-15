@@ -191,7 +191,7 @@ def delete_product_db(conn, product_id):
     """Удаление товара"""
     try:
         cursor = conn.cursor()
-        cursor.execute('DELETE FROM products WHERE id = %s', (product_id))
+        cursor.execute('DELETE FROM products WHERE id = %s', (product_id,))
         deleted_rows = cursor.rowcount
         conn.commit()
         cursor.close()
