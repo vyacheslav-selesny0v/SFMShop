@@ -1,0 +1,5 @@
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/feature/add-email-validation
+  remotes/origin/feature/add-inventory-management
+  remotes/origin/main

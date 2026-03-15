@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, status
 from fastapi.testclient import TestClient
 from pydantic import BaseModel
-from SFMShop.src.database.connection import (
+from sfm_shop.src.database.connection import (
     connect_to_db,
     create_order_db,
     create_user_db,
@@ -13,9 +13,9 @@ from SFMShop.src.database.connection import (
     update_product_price,
     update_product_quantity,
 )
-from SFMShop.src.models.order import Order
-from SFMShop.src.models.product import Product
-from SFMShop.src.models.user import User
+from sfm_shop.src.models.order import Order
+from sfm_shop.src.models.product import Product
+from sfm_shop.src.models.user import User
 
 
 class OrderCreate(BaseModel):

@@ -961,62 +961,156 @@
 # for payment in payments:
 #     print(payment.process_payment())
 
-# Интеграция БД
-from database.connection import connect_to_db, create_user_db, add_product, get_all_products, update_product_price, get_user_by_id, create_order_db, get_user_orders, delete_order
-from database.queries import get_user_order_history, get_order_statistics, get_top_products
+# # Интеграция БД
+# from database.connection import connect_to_db, create_user_db, add_product, get_all_products, update_product_price, get_user_by_id, create_order_db, get_user_orders, delete_order
+# from database.queries import get_user_order_history, get_order_statistics, get_top_products
 
-def main():
-    # Подключение к БД
-    conn = connect_to_db()
-    if not conn:
-        print("❌ Не удалось установить соединение с базой данных")
-        return
+# def main():
+#     # Подключение к БД
+#     conn = connect_to_db()
+#     if not conn:
+#         print("❌ Не удалось установить соединение с базой данных")
+#         return
 
-    try:
-        # Добавить товар
-        add_product(conn, 'Ноутбук', 50000.00, 10)
+#     try:
+#         # Добавить товар
+#         add_product(conn, 'Ноутбук', 50000.00, 10)
 
-        # Получить все товары
-        products = get_all_products(conn)
-        print('Все товары:')
-        for product in products:
-            print(product)
+#         # Получить все товары
+#         products = get_all_products(conn)
+#         print('Все товары:')
+#         for product in products:
+#             print(product)
 
-        # Обновить цену
-        update_product_price(conn, 1, 45000.00)
+#         # Обновить цену
+#         update_product_price(conn, 1, 45000.00)
 
-        # Создать пользователя
-        create_user_db(conn, 'Иван', 'ivan@test.com')
+#         # Создать пользователя
+#         create_user_db(conn, 'Иван', 'ivan@test.com')
 
-        # Получить пользователя по ID
-        user = get_user_by_id(conn, 1)
-        print(f'Пользователь найден: {user}')
+#         # Получить пользователя по ID
+#         user = get_user_by_id(conn, 1)
+#         print(f'Пользователь найден: {user}')
 
-        # Создать заказ
-        create_order_db(conn, 1, 50000.00)
+#         # Создать заказ
+#         create_order_db(conn, 1, 50000.00)
 
-        # Получить заказы пользователя
-        orders = get_user_orders(conn, 1)
-        print(f'Заказы пользователя: {orders}')
+#         # Получить заказы пользователя
+#         orders = get_user_orders(conn, 1)
+#         print(f'Заказы пользователя: {orders}')
 
-        # Аналитика
-        print("\n--- Аналитика ---")
+#         # Аналитика
+#         print("\n--- Аналитика ---")
         
-        history = get_user_order_history(conn, 1)
-        print(f'История заказов пользователя #1: {history}')
+#         history = get_user_order_history(conn, 1)
+#         print(f'История заказов пользователя #1: {history}')
 
-        stats = get_order_statistics(conn)
-        print(f'Статистика заказов: {stats}')
+#         stats = get_order_statistics(conn)
+#         print(f'Статистика заказов: {stats}')
 
-        top = get_top_products(conn)
-        print(f'Топ товаров: {top}')
+#         top = get_top_products(conn)
+#         print(f'Топ товаров: {top}')
     
-    except Exception as e:
-        print(f'❌ Произошла ошибка во время выполнения: {e}')
+#     except Exception as e:
+#         print(f'❌ Произошла ошибка во время выполнения: {e}')
 
-    finally:
-        conn.close()
+#     finally:
+#         conn.close()
     
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
+
+
+# import time
+
+# class Product:
+#     def __init__(self, id, name):
+#         self.id = id
+#         self.name = name
+
+
+# def find_in_list(products, product_id):
+#     for product in products:
+#         if product.id == product_id:
+#             return product
+#     return None
+
+
+# def find_in_dict(products_dict, product_id):
+#     return products_dict.get(product_id)
+
+
+# def compare_search():
+#     # Создать большой список товаров
+#     products = [Product(i, f"Товар {i}") for i in range(10000)]
+
+#     products_dict = {product.id: product for product in products}
+
+#     target = 9010
+
+#     start_time = time.time()
+#     find_in_list(products, target)
+#     end_time = time.time()
+#     time_list = end_time - start_time
+
+#     print(f'Линейный поиск в списке {time_list:.8f} сек.')
+
+#     start_time = time.time()
+#     find_in_dict(products_dict, target)
+#     end_time = time.time()
+#     time_dict = end_time - start_time
+
+#     speedup = time_list / time_dict
+
+#     print(f'Константный поиск в словаре {time_dict:.8f} сек.')
+#     print('=' * 40)
+#     print(f'Ускорение в {speedup:.4f} раз')
+
+#     return {
+#         "time_list": time_list,
+#         "time_dict": time_dict,
+#         "speedup": speedup
+#     }
+
+
+# if __name__ == "__main__":
+#     compare_search()
+
+
+import time
+from datetime import datetime
+import random
+
+
+class Order:
+    def __init__(self, id, created_at, total):
+        self.id = id
+        self.created_at = created_at
+        self.total = total
+
+
+orders_list = [Order(i, datetime.now(), random.randint(0, 5000)) for i in range(3000)]
+
+def buble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j].created_at > arr[j + 1].created_at:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+
+start_time = time.time()
+buble_sort(orders_list)
+buble_sort_time = time.time() - start_time
+
+start_time = time.time()
+sorted_orders = sorted(orders_list, key=lambda x: x.created_at)
+sorted_orders_time = time.time() - start_time
+
+speedup = buble_sort_time / sorted_orders_time
+
+print(f'Время выполнения buble_sort(): {buble_sort_time:.6f} сек')
+print(f'Время выполнения sorted(): {sorted_orders_time:.6f} сек')
+print(f'Увеличение скорости в: {speedup} раз')
