@@ -37,7 +37,7 @@ class Product:
         return self.price * self.quantity
 
     def __str__(self):
-        return f'Товар: {self.name}, Цена: {self.price} руб.'
+        return f'Товар: {self.name}, Цена: {self.price} руб., Количество: {self.quantity}'
 
     def __repr__(self):
         return f'Product("{self.name}", {self.price}, {self.quantity})'
