@@ -1,6 +1,6 @@
 import time
-from functools import wraps
 from sfm_shop.src.models.product import Product
+from sfm_shop.src.models.order import Order
 
 def calculate_discount(price, discount_rate):
     return price * discount_rate
@@ -16,26 +16,27 @@ def calculate_final_price(price, discount_rate, delivery):
 
 
 def calculate_total_orders(orders):
-    return sum(
-        product.get_total_price()
-        for order in orders
-        for product in order.products
-    )
+    return sum(order.total for order in orders)
 
 
-def benchmark_func(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        start_time = time.perf_counter()
-        result = func(*args, **kwargs)
-        end_time = time.perf_counter()
-        execution_time = end_time - start_time
-        print(f'Функция {func.__name__} выполнилась за {execution_time:.10f} секунд.')
-        return result, execution_time
-    return wrapper
+def sort_orders_by_date(orders):
+    return sorted(orders, key=lambda x: x.created_at)
 
 
-@benchmark_func
+def create_test_products(count):
+    return [Product(i, f"Товар {i}", i * 100, 100) for i in range(count)]
+
+
+def create_test_orders(count):
+
+    from datetime import datetime, timedelta
+    base_date = datetime(2024, 1, 1)
+    return [
+        Order(i, [i % 10], i, 1000 + i * 100, base_date + timedelta(days=i % 365))
+        for i in range(count)
+    ]
+
+
 def find_product_in_list(products, product_id):
     
     for product in products:
@@ -44,21 +45,9 @@ def find_product_in_list(products, product_id):
     return None
 
 
-@benchmark_func
-def find_product_in_dict(products_dict, product_id):
-    return products_dict.get(product_id)
+def find_product_in_dict(products_index, product_id):
+    return products_index.get(product_id)
 
 
-products_list = [Product(i, f"Товар {i}", 100, 1) for i in range(10000)]
-products_dict = {product.id: product for product in products_list}
-
-target_id = 9999
-
-res_list, time_list = find_product_in_list(products_list, target_id)
-res_dict, time_dict = find_product_in_dict(products_dict, target_id)
-
-
-speedup = time_list / time_dict
-
-print("-" * 30)
-print(f"Ускорение: поиск в словаре быстрее в {speedup:.2f} раз(а).")    
+def create_products_catalog(products):
+    return {product.id: product for product in products}

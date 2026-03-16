@@ -141,7 +141,7 @@ def get_products(limit: int = 10, offset: int = 0):
 
         products = []
         for data in products_data:
-            product = Product(data[1], data[2], data[3])
+            product = Product(data[0], data[1], data[2], data[3])
             product.id = data[0]
             products.append(product.__dict__)
 
@@ -165,7 +165,7 @@ def get_product(product_id: int):
         data = get_product_by_id(conn, product_id)
 
         if data:
-            product = Product(data['name'], data['price'], data['quantity'])
+            product = Product(data['id'], data['name'], data['price'], data['quantity'])
             product.id = data['id']
             return product.__dict__
         
@@ -203,8 +203,6 @@ def create_order(order: OrderCreate):
 
         new_order_obj = Order(order.user_id, [order.product_id], order_id, total_price)
 
-        new_order_obj.id = order_id
-        new_order_obj.total_price = total_price
         new_order_obj.quantity = order.quantity
 
         new_stock = product['quantity'] - order.quantity

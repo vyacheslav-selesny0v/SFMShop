@@ -1,14 +1,15 @@
-from sfm_shop.src.models import InvalidOrderError
+from sfm_shop.src.models.exceptions import InvalidOrderError
 
 
 class Order:
-    def __init__(self, user, products, order_id, total):
+    def __init__(self, user, products, order_id, total, created_at=None):
         if not products:
             raise InvalidOrderError("Заказ невалиден: пустой список товаров")
         self.user = user
         self.products = products
         self.order_id = order_id
         self.total = total
+        self.created_at = created_at
 
 
     def add_product(self, product):
