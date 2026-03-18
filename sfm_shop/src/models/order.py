@@ -1,8 +1,9 @@
 from datetime import datetime
-from sfm_shop.src.models.exceptions import InvalidOrderError
+from sfm_shop.src.models.exceptions import InvalidOrderError, ValidationError
+from sfm_shop.src.models.mixins import LoggableMixin, ValidatableMixin, SerializableMixin
 
 
-class Order:
+class Order(LoggableMixin, ValidatableMixin, SerializableMixin):
     def __init__(self, user, products, order_id, total, created_at=None):
         if not products:
             raise InvalidOrderError("Заказ невалиден: пустой список товаров")
@@ -11,6 +12,13 @@ class Order:
         self.order_id = order_id
         self.total = total
         self.created_at = created_at if created_at else datetime.now()
+        self.log(f"Создан заказ: {order_id}, сумма: {total}")
+
+
+    def validate(self):
+        if self.total < 0:
+            raise ValidationError("Сумма заказа не может быть отрицательной")
+        return super().validate()
 
 
     def add_product(self, product):

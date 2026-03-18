@@ -1,9 +1,10 @@
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from sfm_shop.src.models.exceptions import NegativePriceError, InsufficientStockError, ValidationError
+from sfm_shop.src.models.mixins import LoggableMixin, ValidatableMixin, SerializableMixin
 
 
 @dataclass
-class Product:
+class Product(LoggableMixin, ValidatableMixin, SerializableMixin):
     product_id: int
     name: str
     _price: float
@@ -11,12 +12,17 @@ class Product:
         
 
     def __post_init__(self):
-        
+        self.log(f"Создан товар: {self.name}, цена: {self.price}")
+        self.validate()
+
+
+    def validate(self):
         if self._price < 0:
             raise NegativePriceError("Цена не может быть отрицательной")
         if self._quantity < 0:
             raise ValidationError("Количество не может быть отрицательным")
-        
+        return super().validate()    
+
 
     @property
     def price(self):

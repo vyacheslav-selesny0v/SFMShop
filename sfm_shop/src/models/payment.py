@@ -3,16 +3,24 @@ class Payment:
         self.amount = amount
     
     def process_payment(self):
-        raise NotImplementedError("Метод должен быть переопределен в дочернем классе")
+        print("Payment.process_payment()")
 
-class CardPayment(Payment):
+
+class Loggable:
+    def log(self):
+        print("Loggable.log()")
+    
+
+class CardPayment(Payment, Loggable):
     def __init__(self, amount, card_number):
         super().__init__(amount)
         self.__card_number = card_number
     
     def process_payment(self):
+        self.log()
+        super().process_payment()
         masked_card = "**** " + self.__card_number[-4:]
-        return "Оплата картой {masked_card}: {self.amount} руб."
+        return f"Оплата картой {masked_card}: {self.amount} руб."
 
 class PayPalPayment(Payment):
     def __init__(self, amount, email):
