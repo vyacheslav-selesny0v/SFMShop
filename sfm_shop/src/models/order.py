@@ -1,3 +1,4 @@
+from datetime import datetime
 from sfm_shop.src.models.exceptions import InvalidOrderError
 
 
@@ -9,15 +10,14 @@ class Order:
         self.products = products
         self.order_id = order_id
         self.total = total
-        self.created_at = created_at
+        self.created_at = created_at if created_at else datetime.now()
 
 
     def add_product(self, product):
-        try:
-            if product not in self.products:
-                raise KeyError('Товар не найден в списке')
-        except KeyError as e:
-            print(f'Ошибка при создании заказа: {e}')
+        if product not in self.products:
+            self.products.append(product)
+        else:
+            print(f'Товар {product} уже есть в заказе')
 
     
     def calculate_total(self):
@@ -28,3 +28,15 @@ class Order:
 
     def __str__(self):
         return f'Заказ #{self.order_id} на сумму {self.total} руб. (Пользователь: {self.user})'
+
+
+    def __eq__(self, other):
+        if not isinstance(other, Order):
+            return False
+        return self.order_id == other.order_id
+    
+
+    def __lt__(self, other):
+        if not isinstance(other, Order):
+            return NotImplemented
+        return self.created_at < other.created_at
