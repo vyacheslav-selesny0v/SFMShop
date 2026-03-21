@@ -1,4 +1,7 @@
-class User:
+from sfm_shop.src.models.metaclasses import ModelMeta
+
+
+class User(metaclass=ModelMeta):
     def __init__(self, name, email):
         self.name = name
         try:

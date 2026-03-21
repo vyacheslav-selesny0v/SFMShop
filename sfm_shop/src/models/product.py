@@ -1,10 +1,32 @@
 from dataclasses import dataclass
 from sfm_shop.src.models.exceptions import NegativePriceError, InsufficientStockError, ValidationError
 from sfm_shop.src.models.mixins import LoggableMixin, ValidatableMixin, SerializableMixin
+from abc import ABC, abstractmethod
+from sfm_shop.src.models.metaclasses import ModelMeta
 
+
+class DiscountStrategy(ABC):
+    @abstractmethod
+    def apply(self, price: float) -> float:
+        pass
+
+
+class PercentDiscount(DiscountStrategy):
+    def __init__(self, percent: float):
+        self.percent = percent
+    def apply(self, price: float) -> float:
+        return price * (1 - self.percent / 100)
+    
+
+class FixedDiscount(DiscountStrategy):
+    def __init__(self, amount: float):
+        self.amount = amount
+    def apply(self, price: float) -> float:
+        return price - self.amount
+    
 
 @dataclass
-class Product(LoggableMixin, ValidatableMixin, SerializableMixin):
+class Product(LoggableMixin, ValidatableMixin, SerializableMixin, metaclass=ModelMeta):
     product_id: int
     name: str
     _price: float
@@ -12,8 +34,8 @@ class Product(LoggableMixin, ValidatableMixin, SerializableMixin):
         
 
     def __post_init__(self):
-        self.log(f"Создан товар: {self.name}, цена: {self.price}")
         self.validate()
+        self.log(f"Создан товар: {self.name}, цена: {self.price}")
 
 
     def validate(self):
@@ -21,7 +43,7 @@ class Product(LoggableMixin, ValidatableMixin, SerializableMixin):
             raise NegativePriceError("Цена не может быть отрицательной")
         if self._quantity < 0:
             raise ValidationError("Количество не может быть отрицательным")
-        return super().validate()    
+        return True    
 
 
     @property
@@ -57,15 +79,9 @@ class Product(LoggableMixin, ValidatableMixin, SerializableMixin):
             _quantity=data.get('_quantity', 0)
         )
 
-    @staticmethod
-    def calculate_discount(price, discount):
-        return price * (1 - discount / 100)
 
-
-    def apply_discount(self, percent):
-        if not (0 <= percent <= 100):
-            raise ValidationError("Скидка должна быть от 0 до 100%")
-        self.price = self.price * (1 - percent / 100)
+    def calculate_price(self, discount: DiscountStrategy):
+        return discount.apply(self.price)
 
 
     def sell(self, amount):
@@ -98,10 +114,6 @@ class Product(LoggableMixin, ValidatableMixin, SerializableMixin):
         if not isinstance(other, Product):
             return False
         return self.name == other.name and self.price == other.price
-
-
-    def check_stock(self):
-        return self._quantity
 
 
     def update_stock(self, amount):
