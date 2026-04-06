@@ -1,26 +1,17 @@
-from sfm_shop.src.models.exceptions import ValidationError, BusinessLogicError
+import json
 
 
 class LoggableMixin:
-    def log(self, message: str):
-        print(f"[{self.__class__.__name__}] {message}")
-
-
-class ValidatableMixin:
-    def validate(self):
-        return True
-
-    def is_valid(self):
-        try:
-            self.validate()
-            return True
-        except (ValidationError, BusinessLogicError):
-            return False
+    def log(self, message):
+        class_name = self.__class__.__name__
+        print(f"[{class_name}] {message}")
 
 
 class SerializableMixin:
+    def to_dict(self):
+        # Возвращает словарь атрибутов объекта
+        return self.__dict__
+
     def to_json(self):
-        return {
-            "class": self.__class__.__name__,
-            "data": self.__dict__
-        }
+        # Сериализует объект в JSON строку
+        return json.dumps(self.to_dict(), indent=4, ensure_ascii=False)

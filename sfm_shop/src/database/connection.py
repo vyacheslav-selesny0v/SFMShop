@@ -1,19 +1,64 @@
+import os
 import psycopg2
 from psycopg2 import Error
+from contextlib import contextmanager
+from dotenv import load_dotenv
 
 
-def connect_to_db():
-    """Подключение к базе данных PostgreSQL"""
+load_dotenv()
+
+
+DB_CONFIG = {
+    "host": os.getenv("DB_HOST", "localhost"),
+    "port": int(os.getenv("DB_PORT", 5432)),
+    "database": os.getenv("DB_NAME", "sfmshop"),
+    "user": os.getenv("DB_USER", "postgres"),
+    "password": os.getenv("DB_PASSWORD")
+}
+
+
+@contextmanager
+def get_connection():
+    """Контекстный менеджер для подключения к БД"""
+    conn = None
     try:
-        return psycopg2.connect(
-            host='localhost',
-            database='sfmshop',
-            user='postgres',
-            password=''
-        )
+        conn = psycopg2.connect(**DB_CONFIG)
+        yield conn
+        conn.commit()
     except Error as e:
-        print(f'❌ Ошибка подключения: {e}')
-        exit()   
+        if conn:
+            conn.rollback()
+        print(f"❌ Ошибка БД: {e}")
+        raise
+    finally:
+        if conn:
+            conn.close()
+
+
+def test_connection():
+    """Проверить подключение к базе данных"""
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT version();")
+                version = cur.fetchone()
+                print(f"Подключение успешно! Версия PostgreSQL: {version[0]}")
+    except Exception as e:
+        print(f"Ошибка подключения: {e}")
+
+
+# def connect_to_db():
+#     """Подключение к базе данных PostgreSQL"""
+#     try:
+#         return psycopg2.connect(
+#             host='localhost',
+#             database='sfmshop',
+#             user='postgres',
+#             password=''
+#         )
+#     except Error as e:
+#         print(f'❌ Ошибка подключения: {e}')
+#         exit()   
 
 
 def create_user_db(conn, name, email):
